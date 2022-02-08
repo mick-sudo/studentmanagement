@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+
+        <h1>create new student</h1>
+
+        <form th:action="@{/students}" method="post" th:object="${student}">
+          <div class="form-group">
+            <label class="control-label" for="firstName"> First Name </label>
+            <input id="firstName" class="form-control" th:field="*{firstName}" required autofocus="autofocus" />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="lastName"> Last Name </label>
+            <input id="lastName" class="form-control" th:field="*{lastName}" required autofocus="autofocus" />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="email"> Email </label> <input id="email" class="form-control"
+              th:field="*{email}" required autofocus="autofocus" />
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

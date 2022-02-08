@@ -7,4 +7,6 @@ import com.javaguide.studentmanagement.model.Student;
 public interface StudentService {
 
   List<Student> getAllStudent();
+
+  Student saveStudent(Student student);
 }
